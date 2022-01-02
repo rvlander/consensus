@@ -1,12 +1,25 @@
 
+use std::vec;
 
-pub struct Gnome<T extends GnomeCom>  {
 
-    pub fn new() -> Self {
+#[derive(Debug)]
+pub struct Gnome  {
+    id: usize,
+}
 
-    } 
+    
+impl Gnome {
+    pub fn new(id: usize) -> Self {
+        Gnome{
+         id
+        }
+    }
+    
+    pub fn print(&self) {
+        println!("{:?}", self);
+    }
 
-    pub fn initialize(neighbours: Vector<&Gnome>) {
+    pub fn initialize(neighbours: vec::Vec<&Gnome>) {
 
     }
 
