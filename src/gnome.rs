@@ -1,17 +1,17 @@
-
-use std::vec;
-
+use super::gnome_com;
 
 #[derive(Debug)]
 pub struct Gnome  {
-    id: usize,
+    pub id: usize,
+    pub com: Option<gnome_com::GnomeCom>,
 }
 
     
 impl Gnome {
     pub fn new(id: usize) -> Self {
         Gnome{
-         id
+         id,
+         com: None
         }
     }
     
@@ -19,19 +19,19 @@ impl Gnome {
         println!("{:?}", self);
     }
 
-    pub fn initialize(neighbours: vec::Vec<&Gnome>) {
+    pub fn initialize(&mut self, com: gnome_com::GnomeCom) {
+        self.com = Some(com);
+    }
+
+    pub fn propose_action(&self) {
 
     }
 
-    pub fn propose_action() {
+    pub fn relay(&self) {
 
     }
 
-    pub fn relay() {
-
-    }
-
-    pub fn execute_action() {
+    pub fn execute_action(&self) {
 
     }
 }

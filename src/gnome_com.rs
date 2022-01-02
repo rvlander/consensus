@@ -1,6 +1,9 @@
-pub struct Message {};
+pub struct Message {}
 
-pub trait GnomeCom {
-    pub say(msg: Message);
-    pub listen();    
+#[derive(Debug)]
+pub struct GnomeCom {}
+
+impl GnomeCom {
+    pub fn say(msg: Message) {}
+    pub fn listen() {}
 }
